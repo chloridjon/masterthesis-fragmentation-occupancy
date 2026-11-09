@@ -45,7 +45,9 @@ seeded draw. There are 59,509 eligible low-H and 43,383 high-H candidates.
 ```
 
 The independent selection audit must reproduce 10,000 identifiers in the
-original order. Expected original catalogue and selection hashes are in
+original order. The public workflow enforces the published fingerprint of
+that identifier order, so a different but internally consistent new sample
+does not pass. Expected original catalogue and selection hashes are in
 `external_inputs.json`. Hashes of whole CSV files can differ due to local
 path or elapsed-time columns; identifier order and raster identities therefore
 provide separate scientific checks. The published audit verifies selection

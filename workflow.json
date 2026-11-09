@@ -620,10 +620,18 @@
       "args": [],
       "script": "Masterarbeit_final/code/analyses/00_thesis_figures/13_metric_regions.py"
     },
+    "regions-boundary-base": {
+      "description": "regions boundary base",
+      "needs": [
+        "regions-initial"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/14_region_proposal_20261104.py"
+    },
     "regions-boundary": {
       "description": "regions boundary",
       "needs": [
-        "regions-initial"
+        "regions-boundary-base"
       ],
       "args": [
         "--focused-d"
@@ -833,6 +841,48 @@
       "args": [],
       "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
     },
+    "method-center-comparison": {
+      "description": "method center comparison",
+      "needs": [
+        "distance"
+      ],
+      "args": [
+        "--figure",
+        "center-comparison"
+      ],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
+    },
+    "method-access-shares": {
+      "description": "method access shares",
+      "needs": [
+        "access"
+      ],
+      "args": [
+        "--figure",
+        "access-shares"
+      ],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
+    },
+    "method-aggregation": {
+      "description": "method aggregation",
+      "needs": [],
+      "args": [
+        "--figure",
+        "majority-aggregation"
+      ],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
+    },
+    "method-redundancy-style": {
+      "description": "method redundancy style",
+      "needs": [
+        "redundancy-summary"
+      ],
+      "args": [
+        "--figure",
+        "redundancy-main"
+      ],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
+    },
     "prepare-map": {
       "description": "prepare map",
       "needs": [
@@ -923,6 +973,10 @@
       "description": "chapter3 figures",
       "needs": [
         "method-figures",
+        "method-center-comparison",
+        "method-aggregation",
+        "method-access-shares",
+        "method-redundancy-style",
         "hybrid-schematic",
         "sample-256-plot"
       ],
@@ -947,7 +1001,8 @@
       "needs": [
         "reference-review",
         "integrated-contrasts",
-        "H-difference"
+        "H-difference",
+        "self-landscape-example"
       ],
       "args": [],
       "script": "Masterarbeit_final/code/analyses/00_thesis_figures/18_occupancy_revision_20261104.py"
@@ -998,7 +1053,8 @@
         "chapter5-annotations",
         "bird-groups",
         "fixed-H-surfaces",
-        "method-figures"
+        "method-figures",
+        "method-access-shares"
       ],
       "args": [],
       "script": "Masterarbeit_final/code/analyses/00_thesis_figures/25_chapter5_labels_20261107.py"

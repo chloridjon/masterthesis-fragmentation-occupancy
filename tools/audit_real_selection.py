@@ -36,6 +36,7 @@ def sample(rows, seed):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--root", required=True, type=Path)
+    p.add_argument("--expected-id-sha256", help="Published original identifier-order fingerprint")
     args = p.parse_args()
     root = args.root
     catalog = read(root / "candidate_catalog.csv")
@@ -56,16 +57,22 @@ def main():
     recreated = sample(low, 20260833) + sample(high, 20260902)
     missing = sorted(set(original) - set(recreated))
     added = sorted(set(recreated) - set(original))
-    report = dict(status="passed" if original == recreated else "failed",
+    original_id_hash = hashlib.sha256("\n".join(original).encode()).hexdigest()
+    recreated_id_hash = hashlib.sha256("\n".join(recreated).encode()).hexdigest()
+    matches_reference = args.expected_id_sha256 is None or original_id_hash == args.expected_id_sha256
+    passed = original == recreated and matches_reference
+    report = dict(status="passed" if passed else "failed",
         n_catalog_rows=len(catalog), n_low_candidates=len(low), n_high_candidates=len(high),
         n_original=len(original), n_recreated=len(recreated), exact_id_order=original == recreated,
         missing_ids=missing, unexpected_ids=added,
+        original_ids_sha256=original_id_hash, recreated_ids_sha256=recreated_id_hash,
+        expected_ids_sha256=args.expected_id_sha256, matches_published_reference=matches_reference if args.expected_id_sha256 else None,
         selection_seeds=dict(low=20260833, high=20260902), numpy_version=np.__version__,
         source_sha256={name: hashlib.sha256((root / name).read_bytes()).hexdigest()
                        for name in ["candidate_catalog.csv", "selected_landscapes.csv"]},
         scope="Selection from original catalogue; does not rerun source raster aggregation")
     print(json.dumps(report, indent=2))
-    raise SystemExit(original != recreated)
+    raise SystemExit(not passed)
 
 
 if __name__ == "__main__":

@@ -198,7 +198,8 @@ if __name__ == "__main__":
     if args.action in ("regions-review", "self-pilot-review") and not args.reviewed:
         p.error("Explicit --reviewed is required after inspecting the generated figures")
     if args.action == "real-selection-audit":
-        raise SystemExit(subprocess.call([sys.executable, str(ROOT / "tools/audit_real_selection.py"), "--root", str(ROOT / "data/real_landscapes")]))
+        expected = json.loads((ROOT / "external_inputs.json").read_text())["selection_audit"]["original_ids_sha256"]
+        raise SystemExit(subprocess.call([sys.executable, str(ROOT / "tools/audit_real_selection.py"), "--root", str(ROOT / "data/real_landscapes"), "--expected-id-sha256", expected]))
     if args.action.startswith("table-"):
         kind = "design" if args.action == "table-design" else "access"
         raise SystemExit(subprocess.call([sys.executable, str(ROOT / "tools/tables.py"), kind]))
