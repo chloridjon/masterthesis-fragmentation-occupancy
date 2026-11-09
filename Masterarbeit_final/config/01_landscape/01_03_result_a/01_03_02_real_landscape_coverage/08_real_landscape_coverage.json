@@ -1,0 +1,40 @@
+{
+  "analysis_plan_section": "1.3.2",
+  "default_real_root": "data/real_landscapes",
+  "selection_manifest": "selected_landscapes.csv",
+  "grid_size_cells": 200,
+  "window_extents_m": [
+    2000,
+    4000,
+    8000,
+    16000,
+    32000
+  ],
+  "n_h_bins": 20,
+  "h_bin_width": 0.05,
+  "windows_per_stratum": 100,
+  "n_simulation_seed_blocks": 200,
+  "minimum_valid_simulation_trajectories": 30,
+  "simulation_interval_quantiles": [
+    0.05,
+    0.95
+  ],
+  "coverage_stability_checkpoints": [
+    50,
+    100,
+    150
+  ],
+  "coverage_stability_tolerance": 0.02,
+  "analysis_boundary": "open",
+  "cluster_connectivity": "4",
+  "distance_mode": "voronoi_dt",
+  "voronoi_depth": 1,
+  "metrics": [
+    "edge_density_total",
+    "largest_cluster_fraction_forest",
+    "chi",
+    "mean_nearest_neighbor_distance",
+    "mean_pairwise_distance",
+    "complete_mst_d50"
+  ]
+}

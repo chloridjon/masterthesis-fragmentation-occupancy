@@ -1,0 +1,23 @@
+{
+  "5.1": "results/00_thesis_figures/18_occupancy_revision_20261104/figures/18_reference_occupancy_compact.svg",
+  "5.2": "results/00_thesis_figures/10_chapter5_review_20261102/10_reference_contrasts_selected.svg",
+  "5.3": "results/00_thesis_figures/10_chapter5_review_20261102/10_integrated_selected.svg",
+  "5.4": "results/00_thesis_figures/10_chapter5_review_20261102/10_H_difference_selected.svg",
+  "5.5": "results/00_thesis_figures/20_chapter5_author_revision_20261105/figures/20_self_colonisation_maps_and_means.svg",
+  "5.6": "results/00_thesis_figures/21_chapter5_annotation_labels_20261107/figures/20_access_H_parameter_contrasts.svg",
+  "5.7": "results/00_thesis_figures/20_chapter5_author_revision_20261105/figures/20_selected_bird_curve_overlays.svg",
+  "5.8": "results/00_thesis_figures/04_selected_bird_sum_surfaces/figures/04_selected_bird_summed_rmse.svg",
+  "5.9": "results/00_thesis_figures/21_chapter5_annotation_labels_20261107/figures/13_reference_ED_LCF.svg",
+  "5.10": "results/00_thesis_figures/21_chapter5_annotation_labels_20261107/figures/20_structure_maps_regions.svg",
+  "5.11": "results/00_thesis_figures/21_chapter5_annotation_labels_20261107/figures/20_connectivity_maps_regions.svg",
+  "5.12": "results/00_thesis_figures/21_chapter5_annotation_labels_20261107/figures/20_structure_regional_curves.svg",
+  "5.13": "results/00_thesis_figures/21_chapter5_annotation_labels_20261107/figures/20_connectivity_regional_curves.svg",
+  "B.13": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/integrated_occupancy_contrast/conditional_256_8_16/figures/11_integrated_occupancy_contrast.svg",
+  "B.14": "results/00_thesis_figures/05_occupancy_H_difference/05_occupancy_H0p400_minus_H0p600.svg",
+  "B.15": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/fixed_H_parameter_surfaces/conditional_256_8_16/figures/11_absolute_H0p600.svg",
+  "B.16": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/fixed_H_parameter_surfaces/conditional_256_8_16/figures/11_absolute_H0p400.svg",
+  "B.17": "results/00_thesis_figures/05_bird_response_groups/figures/05_empirical_bird_response_groups.svg",
+  "B.18": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces/conditional_256_8_16/figures/11_bird_best_curve_overlays.svg",
+  "B.19": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces/conditional_256_8_16/figures/11_bird_summed_rmse.svg",
+  "A.1": "results/00_thesis_figures/03_method_decisions/figures/access_combined_main_effect_shares.svg"
+}

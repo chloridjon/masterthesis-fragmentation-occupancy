@@ -1,0 +1,28 @@
+{
+  "authorization": "Author instruction 2 November2026: exploratory A from lower-left negative Mean NN, B from strongly positive LCF, C from upper-right strongly positive chi; overlaps allowed, no D. No response-Q classification.",
+  "source": "02_metapop/02_03_main_analyses/02_03_03_metric_associations/conditional_256_8_16",
+  "output": "results/00_thesis_figures/13_metric_regions_20261102",
+  "region_coordinate_system": "Rule contours in the existing signed-median maps; sampled memberships use sampled summaries. A is limited to short dispersal to distinguish the lower-left area from the lower-right negative-NN area.",
+  "regions": {
+    "A": {
+      "metric": "mean_nearest_neighbor_distance",
+      "operator": "lt",
+      "threshold": 0.0,
+      "max_half_distance": 16.0
+    },
+    "B": {
+      "metric": "largest_cluster_fraction_forest",
+      "operator": "ge",
+      "threshold": 0.5
+    },
+    "C": {
+      "metric": "chi",
+      "operator": "ge",
+      "threshold": 0.7
+    }
+  },
+  "response_range_sensitivity": 0.05,
+  "reference": "domain131",
+  "interpretation": "Exploratory regions selected from Mean NN, LCF and chi maps, not biological classes or an independent test. Overlaps are allowed and count in each relevant region. Unsampled and unassigned areas are not forced into a region. Profile ranges are variation, not confidence intervals; H levels receive equal weight.",
+  "production": "Reuse checked coefficients and reference bootstrap limits. No new models, landscape generation, fits or bootstrap draws. Undefined coefficients remain missing. Save all memberships, per-profile and per-H diagnostics."
+}

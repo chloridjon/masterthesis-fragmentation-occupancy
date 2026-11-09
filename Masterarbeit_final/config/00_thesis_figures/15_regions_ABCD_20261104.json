@@ -1,0 +1,19 @@
+{
+  "authorization": "Author adopted the new concept on 4 November 2026: C across the full dispersal range; D is the narrower revision_02_focused_D, not revision 03. Update Figures 5.14 and 5.15 and prepare short C/D descriptions before returning to the discussion.",
+  "source": "02_metapop/02_03_main_analyses/02_03_03_metric_associations/conditional_256_8_16",
+  "previous_regions": "results/00_thesis_figures/13_metric_regions_20261102",
+  "selected_preview": "results/00_thesis_figures/14_region_proposal_20261104/revision_02_focused_D",
+  "C_boundary": "results/00_thesis_figures/14_region_proposal_20261104/revision_02_focused_D/14_visual_C_boundary.csv",
+  "output": "results/00_thesis_figures/15_regions_ABCD_20261104",
+  "region_order": ["A", "B", "C", "D"],
+  "regions": {
+    "A": {"metric": "mean_nearest_neighbor_distance", "operator": "lt", "threshold": 0.0, "max_half_distance": 16.0},
+    "B": {"metric": "largest_cluster_fraction_forest", "operator": "ge", "threshold": 0.5},
+    "C": {"rule": "r greater than the frozen adopted C boundary, linearly interpolated in log half-distance / log r; require a defined sampled LCF signed median to respect the displayed support"},
+    "D": {"metric": "mean_nearest_neighbor_distance", "operator": "le", "threshold": -0.3, "min_half_distance_exclusive": 16.0, "require_below_C_boundary": true}
+  },
+  "boundary_scope": "Exploratory descriptive divisions adopted from inspected maps, not biological thresholds or independent tests. C uses the frozen visual boundary; sampled membership is evaluated at sampled coordinates. Unassigned profiles remain unassigned.",
+  "response_range_sensitivity": 0.05,
+  "profile_quantiles": [0.05, 0.5, 0.95],
+  "production": "Regroup unchanged within-H coefficients from the complete audited 8/16-run, seven-scenario ensemble. No new equilibrium calculation, landscape simulation, fit, bootstrap or species-domain change. Preserve old outputs."
+}

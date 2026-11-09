@@ -1,0 +1,20 @@
+{
+  "authorization": "Author request 2026-11-02: select a separate q=1 domain with the baseline criteria, then search for negative scenario contrasts; a coarser grid and fewer landscape runs are sufficient.",
+  "source_directory": "data/processed/02_metapop/02_04_robustness/self_colonization_extension_20261015/domain",
+  "source_audit": "results/02_metapop/02_04_robustness/self_colonization_extension_20261015/seeds008/logs/13_final_audit.json",
+  "rectangle_decision": "results/02_metapop/02_04_robustness/self_colonization_extension_20261015/seeds008/logs/13_q1_validated_domain.json",
+  "results_directory": "results/02_metapop/02_04_robustness/self_colonization_response_domain_20261102",
+  "replicates": [1, 2, 3, 4, 5, 6, 7, 8],
+  "replication_checks": [5, 8],
+  "h_targets": [0.025, 0.2, 0.4, 0.6, 0.825],
+  "minimum_valid_seeds": 3,
+  "saturation_threshold": 0.05,
+  "quantile_method": "linear",
+  "contrast_threshold": -0.05,
+  "baseline_scenario": "only_random_rho0",
+  "focal_scenario": "access_weighted_rho0999",
+  "selection": "Apply L=min scenario-H landscape q05 <0.95 and U=max scenario-H landscape q95 >0.05 independently of contrasts, inside the separately selected q=1 rectangle. Use observed grid points only; no smooth boundary interpolation or new parameter distribution.",
+  "h_scope": "The five available H levels certify an inner subset of the all-H response domain: each retained point has witnesses for both inequalities. Failure on these five H levels does not establish saturation across all 88 baseline H levels; classify these points unresolved for the all-H rule.",
+  "stability": "Recompute selection and contrasts for the first five and all eight complete matched runs and every complete-run omission. Report sensitivity; no bootstrap confidence intervals or sample adequacy claim.",
+  "cache_policy": "Read-only reuse of audited q=1 caches. Verify each CSV, receipt and all independent-audit hashes before summarising. No raw data or original cache changes; no equilibrium solves."
+}

@@ -1,0 +1,19 @@
+{
+  "boundary_configuration": "config/02_metapop/02_02_species_parameter_selection/response_boundary_refinement/09_response_boundary_refinement.json",
+  "boundary_data": "data/processed/02_metapop/02_02_species_parameter_selection/response_boundary_refinement",
+  "boundary_audit": "results/02_metapop/02_02_species_parameter_selection/response_boundary_refinement/logs/09_independent_boundary_audit.json",
+  "half_distance_window": [1,512],
+  "log10_r_window": [-2.5,5.75],
+  "n_dispersion_strata": 64,
+  "n_ratio_strata_per_dispersion": 4,
+  "seed": 2026101302,
+  "saturation_threshold": 0.05,
+  "density": "Uniform area in (log half-distance, log r), conditional on the monotone certified inner response domain within the previously justified main rectangle",
+  "selection": "One independently jittered marginal-area coordinate in each of 64 equal-probability strata; four independently jittered conditional log-r strata at each resulting dispersion position",
+  "boundary_queries_are_main_samples": false,
+  "old_main_samples_are_pooled_unweighted": false,
+  "extended_window_role": "Diagnostic only; do not promote the isolated-H=.01 tail or the dispersal plateau into the main sampling distribution",
+  "authorization": "2026-10-13: user authorises overnight sampling and equilibrium calculations in the narrower domain; routine choices delegated, no questions available",
+  "data_directory": "data/processed/02_metapop/02_02_species_parameter_selection/confirmed_response_sampling",
+  "results_directory": "results/02_metapop/02_02_species_parameter_selection/confirmed_response_sampling"
+}

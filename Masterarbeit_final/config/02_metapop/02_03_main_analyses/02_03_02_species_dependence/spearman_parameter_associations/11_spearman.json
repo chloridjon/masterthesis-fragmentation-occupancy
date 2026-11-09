@@ -1,0 +1,23 @@
+{
+  "source_snapshot": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/confirmed_domain_256/replication_008_016/summary_008_016",
+  "results_directory": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/spearman_parameter_associations/conditional_256_8_16",
+  "data_directory": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/spearman_parameter_associations/conditional_256_8_16",
+  "minimum_valid_landscape_seeds": 3,
+  "minimum_contrast_range": 1e-10,
+  "numerical_tie_sensitivity_rounding": 1e-8,
+  "seed_omission_tolerance": 0.05,
+  "bootstrap": {
+    "seed": 2026101503,
+    "initial_draws": 1000,
+    "batch_draws": 1000,
+    "maximum_draws": 20000,
+    "processing_chunk": 32,
+    "endpoint_tolerance": 0.01,
+    "central_tolerance": 0.005,
+    "consecutive_stable_batches": 3,
+    "minimum_valid_fraction": 0.95,
+    "interval": "Pointwise percentile95%, linear quantiles at .025/.5/.975",
+    "resampling": "Shared cohort1-8 jointly across all7scenarios/H/profiles; independent cohort9-16 jointly across the6directed scenarios/H/profiles; never resample parameter profiles"
+  },
+  "scope": "Marginal Spearman associations of profile median contrast with log10(r) and log10(half-distance) at each H, conditional on the fixed joint256-profile numerical design; no p-values, biological parameter effects, or new simulations"
+}

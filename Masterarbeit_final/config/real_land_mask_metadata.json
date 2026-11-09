@@ -1,0 +1,19 @@
+{
+  "antarctica_levels_included": false,
+  "levels": {
+    "1": 1.0,
+    "2": -1.0,
+    "3": 1.0,
+    "4": -1.0
+  },
+  "load_seconds": 15.192724499851465,
+  "polygon_counts": {
+    "1": 179518,
+    "2": 6646,
+    "3": 1437,
+    "4": 11
+  },
+  "resolution": "f",
+  "source": "data/external\\gshhg\\gshhg-shp-2.3.7",
+  "type": "GSHHG_vector_land_mask"
+}

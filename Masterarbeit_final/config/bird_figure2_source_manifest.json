@@ -1,0 +1,14 @@
+{
+  "doi": "https://doi.org/10.1007/s10980-020-01121-6",
+  "figure_page": "https://link.springer.com/article/10.1007/s10980-020-01121-6/figures/2",
+  "image_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10980-020-01121-6/MediaObjects/10980_2020_1121_Fig2_HTML.png",
+  "source_image_sha256": "c357bf3a21dd5ee7dfb910f651ca420dee8677fe0e9f43827d71b4f8ab3ddd06",
+  "retrieved_on": "2026-10-13",
+  "image_size_pixels": [
+    1534,
+    2479
+  ],
+  "format": "Publisher PNG, not the browser-transcoded WebP",
+  "band_interpretation": "Pointwise 95% confidence interval for the fitted response, assumed at the user's request on 2026-10-13; band construction and coverage are not confirmed by the authors.",
+  "band_definition_verified": false
+}

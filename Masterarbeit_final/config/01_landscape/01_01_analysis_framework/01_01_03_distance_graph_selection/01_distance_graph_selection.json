@@ -1,0 +1,35 @@
+{
+  "analysis_plan_section": "1.1.3",
+  "grid_size_cells": 200,
+  "base_seed": 20260924,
+  "n_replicates": 10,
+  "n_expected_random_removal_targets": 13,
+  "minimum_expected_random_removals": 1.0,
+  "rho_sampling": "Geometric spacing of expected cumulative random removals from 1 to all removals at the last sampled habitat level; map each target to a fixed rho and reserve the final target for the rho=0 Only-Random reference",
+  "h_targets": [
+    0.99,
+    0.9,
+    0.8,
+    0.7,
+    0.5,
+    0.3,
+    0.1,
+    0.01
+  ],
+  "half_distances_cells": [
+    4.026520979354529,
+    6.48074069840786,
+    10.430840970492795
+  ],
+  "alpha_source": "Last preliminary talk analysis: outputs/_tmp_vortrag2_voronoi_nn_20260915/talk_summary.md, generic 40/50/60 log-range profiles",
+  "capacity_x": 0.5,
+  "capacity_b": 1.0,
+  "kernel_epsilon": 0.0001,
+  "generation_boundary": "periodic",
+  "analysis_boundary": "open",
+  "voronoi_hybrid_neighbor_weights": "exact_edge_min",
+  "access_k": 3,
+  "access_lambda": 0.5,
+  "access_eta": 1.0,
+  "access_parameter_status": "Provisional until analysis 1.2.1 selects the reference parameterisation"
+}

@@ -1,0 +1,12 @@
+{
+  "source_snapshot": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/confirmed_domain_256/replication_008_016/summary_008_016",
+  "results_directory": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/habitat_parameter_contrast/conditional_256_8_16",
+  "data_directory": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/habitat_parameter_contrast/conditional_256_8_16",
+  "n_log_bins": 16,
+  "minimum_valid_landscape_seeds": 3,
+  "aggregation": "Arithmetic mean of profile-specific median occupancy contrasts, equal design weights renormalised in each fixed logarithmic class",
+  "other_parameter": "Varies according to sampled joint conditional log-area design, not held fixed",
+  "H_domain": "Common contiguous finite-median domain across all seven scenarios and 256 profiles",
+  "color_limits": [-1, 1],
+  "scope": "Descriptive pointwise H-by-parameter summaries requested 2026-10-15; no model simulations or CIs"
+}

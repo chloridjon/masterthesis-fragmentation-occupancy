@@ -1,0 +1,17 @@
+{
+  "replicates": [1, 2, 3],
+  "h_targets": [0, 0.025, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.725, 0.825, 0.925, 0.975, 1],
+  "reference": "domain131",
+  "parameter_design": "data/processed/02_metapop/02_02_species_parameter_selection/confirmed_response_sampling/09_confirmed_response_parameters.csv",
+  "baseline_data": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/confirmed_domain_256",
+  "geometry_cache": "data/processed/02_metapop/02_02_species_parameter_selection/response_boundary_refinement",
+  "landscape_data": "data/processed/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/landscape_metrics.csv",
+  "extension_half_distances": [1, 16, 256],
+  "extension_ratios": [0.01, 0.03162277660168379, 0.1, 0.31622776601683794, 1, 3.1622776601683795, 10, 31.622776601683793, 100, 316.22776601683796, 1000, 3162.2776601683795, 10000, 31622.776601683792, 100000, 316227.7660168379, 1000000, 3162277.6601683795, 10000000],
+  "extension_h_targets": [0.025, 0.2, 0.4, 0.6, 0.825],
+  "max_iter": 2000,
+  "continuation_max_iter": 1000000,
+  "tol": 1e-12,
+  "minimum_valid_seeds": 3,
+  "interpretation": "Exploratory paired comparison before any q=1 parameter-domain decision. No baseline bounds or reference changed. No bootstrap CI or bird refitting."
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "source_code_sha256": "9801eacbb010f4151b0ee4d7dff989437ddb90bdb7a549fdb52c59646e8d59a7",
+  "rasterio": "1.5.1",
+  "cases": [
+    {
+      "sample_id": "center_109513__02km",
+      "expected": "abebf13c066ab5e501688d4d97e028d24cc106600d7f3443858d334bcab07414",
+      "actual": "abebf13c066ab5e501688d4d97e028d24cc106600d7f3443858d334bcab07414",
+      "passed": true,
+      "forest_cover": 0.932175
+    },
+    {
+      "sample_id": "center_106863__32km",
+      "expected": "cc53dc4aa7486728c6c6c55eb1a67286d3f6e68ece222d21bd34578b527dd115",
+      "actual": "cc53dc4aa7486728c6c6c55eb1a67286d3f6e68ece222d21bd34578b527dd115",
+      "passed": true,
+      "forest_cover": 0.9094
+    }
+  ]
+}

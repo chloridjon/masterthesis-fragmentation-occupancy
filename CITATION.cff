@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the thesis and identify the repository commit used."
+type: software
+title: "Deforestation patterns, landscape structure and species-dependent patch occupancy"
+authors:
+  - family-names: Donner
+    given-names: Jon Magnus
+repository-code: "https://github.com/chloridjon/masterthesis-fragmentation-occupancy"
+license: MIT

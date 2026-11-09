@@ -1,0 +1,10 @@
+{
+  "initial_draws": 500,
+  "batch_draws": 500,
+  "maximum_draws": 10000,
+  "consecutive_stable_batches": 3,
+  "correlation_tolerance": 0.005,
+  "difference_scale_tolerance": 0.01,
+  "loo_correlation_tolerance": 0.05,
+  "loo_difference_scale_tolerance": 0.1
+}

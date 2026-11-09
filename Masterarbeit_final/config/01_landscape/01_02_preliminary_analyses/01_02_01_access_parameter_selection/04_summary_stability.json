@@ -1,0 +1,4 @@
+{
+  "maximum_main_share_change": 0.1,
+  "interpretation": "Leave-one-seed-out influence, conditional on the ten observed seeds; not proof of population sample adequacy."
+}

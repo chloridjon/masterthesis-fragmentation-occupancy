@@ -1,0 +1,28 @@
+{
+  "analysis_plan_sections": ["2.2.1", "2.2.2", "2.2.3", "2.2.4"],
+  "landscape_config": "config/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/07_structural_scenario_responses.json",
+  "landscape_data": "data/processed/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/landscape_metrics.csv",
+  "replicates": [1, 51, 101, 151, 200],
+  "h_targets": [0.0, 0.025, 0.075, 0.175, 0.325, 0.5, 0.65, 0.825, 0.975, 1.0],
+  "r_values": [0.1, 1.0, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, 10000000.0],
+  "half_distance_values": [0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0, 64.0, 128.0],
+  "area_units": "habitat cell counts; no normalisation",
+  "distance_units": "cell-coordinate distances; no physical calibration",
+  "b": 1.0,
+  "x": 0.5,
+  "self_colonization": 0.0,
+  "initial_occupancy": 1.0,
+  "kernel_epsilon": 0.0,
+  "solver": {"max_iter": 20000, "retry_max_iter": 100000, "tol": 1e-10},
+  "selection": {
+    "floor": 0.05,
+    "ceiling": 0.95,
+    "minimum_valid_seeds_per_scenario_h": 3,
+    "minimum_marginal_intermediate_fraction": 0.1,
+    "rule": "retain the span of sampled axis levels meeting the marginal intermediate-response criterion; equal weight for eligible scenario-H cells; no scenario contrasts used",
+    "seed_influence_occupancy_tolerance": 0.05,
+    "maximum_sensitive_fraction": 0.1,
+    "range_endpoint_tolerance_grid_steps": 1
+  },
+  "final_lhs": {"n_samples": 128, "seed": 2026093009, "independent_of_pilot": true}
+}

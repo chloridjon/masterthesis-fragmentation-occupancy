@@ -1,0 +1,17 @@
+{
+  "source_snapshot": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/confirmed_domain_256/replication_008_016/summary_008_016",
+  "domain_strips": "data/processed/02_metapop/02_02_species_parameter_selection/confirmed_response_sampling/09_confirmed_log_area_strips.csv",
+  "results_directory": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/fixed_H_parameter_surfaces/conditional_256_8_16",
+  "data_directory": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/fixed_H_parameter_surfaces/conditional_256_8_16",
+  "nominal_H": [0.8, 0.6, 0.4, 0.2],
+  "selected_H": [0.825, 0.6, 0.4, 0.2],
+  "selection_rule": "Broad equally spaced nominal H overview; nearest existing H, ties within 1e-12 resolved towards larger H. No occupancy/contrast maximum used in selection.",
+  "minimum_valid_seeds": 3,
+  "grid_n_half_distance": 200,
+  "grid_n_r": 240,
+  "interpolation": "Piecewise-linear Delaunay in unit-normalised log10 coordinates, intersect convex hull with adopted exact stepwise inner domain",
+  "absolute_limits": [0, 1],
+  "contrast_limits": [-1, 1],
+  "source_replication": {"only_random": 8, "each_directed": 16},
+  "scope": "Descriptive Results-C maps at four fixed habitat proportions; full joint256-profile response, no parameter binning or marginal averaging, no new simulations or CIs"
+}

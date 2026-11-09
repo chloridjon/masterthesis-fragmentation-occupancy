@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_plan_section": "2.3.2: empirical comparison, fallback reconstruction",
+  "source_directory": "Masterarbeit_final/data/external/morante_filho_2021",
+  "output_directory": "Masterarbeit_final/data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_reconstruction",
+  "audit_directory": "Masterarbeit_final/results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_reconstruction/logs",
+  "simulation_grid_config": "Masterarbeit_final/config/02_metapop/02_03_main_analyses/02_03_02_species_dependence/lhs_20_seeds/11_lhs_occupancy.json",
+  "supplement_filename": "10980_2020_1121_MOESM1_ESM.docx",
+  "anchor_h": [0.2, 0.4],
+  "check_occupancy": 0.6,
+  "observed_h_min": 0.0675,
+  "observed_h_max": 0.9818,
+  "dense_h_step": 0.001,
+  "probability_rounding_half_width": 0.005,
+  "threshold_rounding_half_width_h": 0.0005,
+  "expected_table1_species": 19,
+  "expected_forest_species": 15,
+  "selection_rule": "All Table 1 rows labelled Forest; Non-forest rows remain in the source table but are excluded from reconstruction.",
+  "coefficient_method": "Exact logit line through the rounded published probabilities at H=0.2 and H=0.4; the published psi=0.6 threshold is held out for checking.",
+  "empirical_confidence_intervals_available": false,
+  "rounding_envelope_role": "Deterministic compatibility diagnostic under rounding to nearest; not a confidence interval.",
+  "randomness": "None"
+}

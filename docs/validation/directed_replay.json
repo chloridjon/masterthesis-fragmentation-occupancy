@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "scenario_id": "edge_random_rho0999",
+      "n_snapshots": 88,
+      "exact_identity": true,
+      "metrics": {
+        "edge_density_total": true,
+        "largest_cluster_fraction_forest": true,
+        "chi": true,
+        "mean_nearest_neighbor_distance": true,
+        "mean_pairwise_distance": true,
+        "complete_mst_d50": true
+      },
+      "passed": true
+    },
+    {
+      "scenario_id": "access_weighted_rho0999",
+      "n_snapshots": 88,
+      "exact_identity": true,
+      "metrics": {
+        "edge_density_total": true,
+        "largest_cluster_fraction_forest": true,
+        "chi": true,
+        "mean_nearest_neighbor_distance": true,
+        "mean_pairwise_distance": true,
+        "complete_mst_d50": true
+      },
+      "passed": true
+    }
+  ],
+  "scope": "One original-size trajectory for each strongly directed mechanism; canonical ED units; not a complete ensemble rerun"
+}

@@ -1,0 +1,23 @@
+{
+  "selected_parameter_id": "domain131",
+  "n_reference_seeds": 20,
+  "workers": 6,
+  "source_snapshot": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/confirmed_domain_256/snapshot_005",
+  "data_directory": "data/processed/02_metapop/02_03_main_analyses/02_03_01_scenario_occupancy/reference_conditional_256",
+  "results_directory": "results/02_metapop/02_03_main_analyses/02_03_01_scenario_occupancy/reference_conditional_256",
+  "selection_rule": "Response-informed Pareto compromise after inspecting the 256-profile diagnostics; no weighted score. Require .1/.9 coverage in every scenario and an interior profile. Prefer domain131 for its wide minimum intermediate-H band (.361), near-complete minimum occupancy span (.955) and strong mean scenario separation (.142); table retains larger-span and wider-transition alternatives. Not a unique mathematical optimum or biological type.",
+  "selection_authorisation": "User requested a new Result-B reference from the 256 profiles on 2026-10-14",
+  "minimum_valid_seeds": 3,
+  "minimum_valid_bootstrap_fraction": 0.95,
+  "bootstrap": {
+    "initial_draws": 1000,
+    "batch_draws": 1000,
+    "maximum_draws": 20000,
+    "consecutive_stable_batches": 3,
+    "endpoint_tolerance": 0.002,
+    "central_tolerance": 0.002,
+    "seed": 2026101401,
+    "confidence_level": 0.95,
+    "resampling_unit": "whole matched seed block"
+  }
+}

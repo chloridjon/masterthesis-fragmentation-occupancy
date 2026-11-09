@@ -1,0 +1,40 @@
+{
+  "baseline_configuration": "config/02_metapop/02_03_main_analyses/02_03_02_species_dependence/lhs_20_seeds/11_lhs_occupancy.json",
+  "design_configuration": "config/02_metapop/02_02_species_parameter_selection/confirmed_response_sampling/09_confirmed_response_sampling.json",
+  "parameter_design": "data/processed/02_metapop/02_02_species_parameter_selection/confirmed_response_sampling/09_confirmed_response_parameters.csv",
+  "design_preflight": "results/02_metapop/02_02_species_parameter_selection/confirmed_response_sampling/logs/09_design_preflight.json",
+  "geometry_cache": "data/processed/02_metapop/02_02_species_parameter_selection/response_boundary_refinement",
+  "n_parameters": 256,
+  "n_initial_seed_blocks": 5,
+  "n_maximum_seed_blocks": 20,
+  "q": 0.0,
+  "b": 1.0,
+  "x": 0.5,
+  "initial_occupancy": 1.0,
+  "kernel_epsilon": 0.0,
+  "solver": {
+    "max_iter": 2000,
+    "continuation_max_iter": 1000000,
+    "tol": 1e-12,
+    "empty_verification_probability": 0.0001,
+    "independent_probability_tolerance": 2e-7,
+    "independent_reference_tol": 1e-13,
+    "precision_retry_tol": 1e-13
+  },
+  "independent_checks": {
+    "all_parameters_max_patches": 200,
+    "selected_parameters_max_patches": 500,
+    "parameter_ids": ["domain001","domain064","domain128","domain192","domain256"]
+  },
+  "summary": {
+    "minimum_valid_seeds": 3,
+    "occupancy_tolerance": 0.05,
+    "contrast_tolerance": 0.05,
+    "maximum_sensitive_fraction": 0.1,
+    "floor": 0.05,
+    "ceiling": 0.95
+  },
+  "batch_method": "Four ratios at the same half-distance share one full kernel; each ratio has its own stopping and original-equation residual check. Scalar/capacity verification and precision retry are declared before the run.",
+  "data_directory": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/confirmed_domain_256",
+  "results_directory": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/confirmed_domain_256"
+}

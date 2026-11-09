@@ -1,0 +1,34 @@
+{
+  "grid_metadata": {
+    "macrogrid_crs": "EPSG:6933",
+    "macrogrid_seed": 20260831,
+    "macrogrid_size_m": 64000.0,
+    "max_centers": 0,
+    "n_centers_in_source_bounds": 115116,
+    "n_land_centers": 32288,
+    "n_projected_centers": 115116,
+    "n_selected_centers": 32288,
+    "offset_x_m": 10365.126793736528,
+    "offset_y_m": 41185.34665668228,
+    "pilot_selection_seed": 20260832,
+    "projected_bounds": [
+      -17367530.445161372,
+      -6351419.997326236,
+      17367530.445161372,
+      7229704.847593094
+    ]
+  },
+  "requested_definition": {
+    "macrogrid_crs": "EPSG:6933",
+    "macrogrid_seed": 20260831,
+    "macrogrid_size_m": 64000.0,
+    "max_centers": 0,
+    "source_bounds": [
+      -180.0,
+      -60.0,
+      180.0,
+      80.0
+    ],
+    "source_crs": "EPSG:4326"
+  }
+}

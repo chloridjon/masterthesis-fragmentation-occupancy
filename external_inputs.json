@@ -1,0 +1,42 @@
+{
+  "forest_product": "JRC Global Forest Cover 2020 version 3",
+  "forest_source_page": "https://forobs.jrc.ec.europa.eu/GFC/v3",
+  "source_bounds": [
+    -180,
+    -60,
+    180,
+    80
+  ],
+  "source_shape": [
+    1680000,
+    4320000
+  ],
+  "source_crs": "EPSG:4326",
+  "macrogrid_seed": 20260831,
+  "low_H_selection_seed": 20260833,
+  "high_H_selection_seed": 20260902,
+  "GSHHG_version": "2.3.7",
+  "GSHHG_resolution": "f",
+  "exclude_zero_H": true,
+  "selection_audit": {
+    "status": "passed",
+    "n_catalog_rows": 161440,
+    "n_low_candidates": 59509,
+    "n_high_candidates": 43383,
+    "n_original": 10000,
+    "n_recreated": 10000,
+    "exact_id_order": true,
+    "missing_ids": [],
+    "unexpected_ids": [],
+    "selection_seeds": {
+      "low": 20260833,
+      "high": 20260902
+    },
+    "numpy_version": "2.3.4",
+    "source_sha256": {
+      "candidate_catalog.csv": "baacfbc203c99b6ea6afc823c5a4dcd895700beb52f094616f615d55023c2059",
+      "selected_landscapes.csv": "4418f3be76e57605eac254514cf86ad16714e4169caf74284292dad3a3258c18"
+    },
+    "scope": "Selection from original catalogue; does not rerun source raster aggregation"
+  }
+}

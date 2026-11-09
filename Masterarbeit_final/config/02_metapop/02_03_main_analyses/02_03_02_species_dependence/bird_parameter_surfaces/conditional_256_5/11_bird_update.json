@@ -1,0 +1,14 @@
+{
+  "source_snapshot": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/confirmed_domain_256/snapshot_005",
+  "bird_data": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_reconstruction",
+  "domain_strips": "data/processed/02_metapop/02_02_species_parameter_selection/confirmed_response_sampling/09_confirmed_log_area_strips.csv",
+  "old_lhs_configuration": "config/02_metapop/02_03_main_analyses/02_03_02_species_dependence/lhs_20_seeds/11_lhs_occupancy.json",
+  "old_lhs_data": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/lhs_20_seeds",
+  "old_score_table": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces/11_bird_scenario_parameter_rmse.csv",
+  "data_directory": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces/conditional_256_5",
+  "results_directory": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces/conditional_256_5",
+  "grid_n_half_distance": 130,
+  "grid_n_r": 160,
+  "minimum_valid_seeds": 3,
+  "rmse_colormap": "cividis_r"
+}

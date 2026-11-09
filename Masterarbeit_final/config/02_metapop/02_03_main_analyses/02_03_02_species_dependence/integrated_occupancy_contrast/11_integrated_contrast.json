@@ -1,0 +1,12 @@
+{
+  "source_snapshot": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/confirmed_domain_256/replication_008_016/summary_008_016",
+  "domain_strips": "data/processed/02_metapop/02_02_species_parameter_selection/confirmed_response_sampling/09_confirmed_log_area_strips.csv",
+  "results_directory": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/integrated_occupancy_contrast/conditional_256_8_16",
+  "data_directory": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/integrated_occupancy_contrast/conditional_256_8_16",
+  "grid_n_half_distance": 180,
+  "grid_n_r": 210,
+  "minimum_valid_seeds": 3,
+  "statistic": "Signed difference of trapezoidal areas under median occupancy curves, scenario minus Only-Random",
+  "H_domain_rule": "Common contiguous finite-median domain across all scenarios and parameter profiles; no extrapolation",
+  "scope": "Author-requested supplementary descriptive summary, 2026-10-15; pointwise H contrasts remain primary"
+}

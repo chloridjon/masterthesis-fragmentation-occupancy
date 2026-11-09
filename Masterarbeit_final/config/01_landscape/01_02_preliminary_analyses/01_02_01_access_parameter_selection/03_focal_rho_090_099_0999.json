@@ -1,0 +1,59 @@
+{
+  "analysis_plan_section": "1.2.1",
+  "grid_size_cells": 200,
+  "base_seed": 20260924,
+  "n_replicates": 10,
+  "h_targets": [
+    0.99,
+    0.9,
+    0.8,
+    0.7,
+    0.5,
+    0.3,
+    0.1,
+    0.01
+  ],
+  "rho_values": [
+    0.9,
+    0.99,
+    0.999
+  ],
+  "rho_source": "User-selected focal directed scenarios; the same rho values apply to Edge-Random and Access-based analyses",
+  "eta_values": [
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "k_values": [
+    1,
+    3,
+    5
+  ],
+  "lambda_values": [
+    0.1,
+    0.5,
+    1.0
+  ],
+  "canonical_lambda_when_k_is_one": 0.5,
+  "generation_boundary": "periodic",
+  "analysis_boundary": "open",
+  "cluster_connectivity": "4",
+  "distance_mode": "voronoi_dt",
+  "voronoi_depth": 1,
+  "selected_structural_metrics": [
+    "edge_density_total",
+    "largest_cluster_fraction_forest",
+    "chi",
+    "mean_nearest_neighbor_distance",
+    "mean_pairwise_distance",
+    "complete_mst_d50"
+  ],
+  "reference_candidate": {
+    "eta": 1.0,
+    "k": 3,
+    "lambda": 0.5
+  },
+  "kernel_capacity_included": false,
+  "real_landscapes_included": false
+}

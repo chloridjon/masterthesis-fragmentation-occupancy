@@ -1,0 +1,194 @@
+{
+  "forest_source": "JRC Global Forest Cover 2020 V3; two selected real-landscape sample NPZ files copied unchanged from the source archive on Alder",
+  "osm_source": "OpenStreetMap API 0.6 map extracts; \u00a9 OpenStreetMap contributors, ODbL 1.0",
+  "osm_retrieved_utc": "2026-10-20",
+  "cases": [
+    {
+      "sample_id": "center_109513__02km",
+      "source_relative_path": "selected_landscapes/02km/hbin_18/center_109513__02km.npz",
+      "copied_npz": "center_109513__02km.npz",
+      "npz_sha256": "7751bcbfc4edb739122ddfb162c9a4901a96104e227e50f658983396a2b69fd8",
+      "grid_sha256": "abebf13c066ab5e501688d4d97e028d24cc106600d7f3443858d334bcab07414",
+      "extent_m": 2000,
+      "H": 0.932175,
+      "LCF": 0.5353876686244535,
+      "lat": 63.02164158679738,
+      "lon": 65.44313979536032,
+      "region": "Khanty-Mansi Autonomous Okrug",
+      "source_osm_api_url": "https://api.openstreetmap.org/api/0.6/map?bbox=65.423,63.0126,65.463,63.0306",
+      "osm_way_ids": [
+        206876845,
+        307059443,
+        307059444,
+        310065833,
+        316170571,
+        370864134,
+        371178183,
+        371257856,
+        371257858,
+        371292075,
+        1304647310,
+        1304720395
+      ]
+    },
+    {
+      "sample_id": "center_106863__32km",
+      "source_relative_path": "selected_landscapes/32km/hbin_18/center_106863__32km.npz",
+      "copied_npz": "center_106863__32km.npz",
+      "npz_sha256": "d4682d0e279561b1b5c89654036442d153441408b2b0cf06a486cb57c8bab7e8",
+      "grid_sha256": "cc53dc4aa7486728c6c6c55eb1a67286d3f6e68ece222d21bd34578b527dd115",
+      "extent_m": 32000,
+      "H": 0.9094,
+      "LCF": 0.4989278645260611,
+      "lat": 57.97760371817643,
+      "lon": 108.5580778900056,
+      "region": "Irkutsk Oblast",
+      "source_osm_api_url": "https://api.openstreetmap.org/api/0.6/map?bbox=108.2865,57.8336,108.8296,58.1210",
+      "osm_way_ids": [
+        150583267,
+        557131845,
+        557131846,
+        557131847,
+        557261223
+      ]
+    }
+  ],
+  "feature_rules": [
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 206876845,
+      "feature_type": "power_line",
+      "name": "\u041f\u043e\u0433\u0440\u0435\u0431\u043d\u043e\u0435 - \u0411\u0435\u043b\u043e\u044f\u0440\u0441\u043a\u0430\u044f \u0441 \u043e\u0442\u043f. \u0411\u043e\u0431\u0440\u043e\u0432\u0441\u043a\u0430\u044f, \u041e\u043a\u0442\u044f\u0431\u0440\u044c\u0441\u043a\u0430\u044f, \u041e\u043a\u0442\u044f\u0431\u0440\u044c\u0441\u043a\u0430\u044f - \u0428\u0435\u0440\u043a\u0430\u043b\u044b",
+      "osm_timestamp": "2025-02-21T16:02:05Z",
+      "osm_version": "16"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 307059443,
+      "feature_type": "power_line",
+      "name": "\u043e\u0442\u043f? \u0428\u0435\u0440\u043a\u0430\u043b\u044b \u043e\u0442 \u041f\u043e\u0433\u0440\u0435\u0431\u043d\u043e\u0435 - \u0411\u0435\u043b\u043e\u044f\u0440\u0441\u043a\u0430\u044f \u0441 \u043e\u0442\u043f.",
+      "osm_timestamp": "2025-02-05T12:51:08Z",
+      "osm_version": "9"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 307059444,
+      "feature_type": "power_line",
+      "name": "\u041f\u043e\u0433\u0440\u0435\u0431\u043d\u043e\u0435 - \u0411\u0435\u043b\u043e\u044f\u0440\u0441\u043a\u0430\u044f \u0441 \u043e\u0442\u043f. \u0411\u043e\u0431\u0440\u043e\u0432\u0441\u043a\u0430\u044f, \u041e\u043a\u0442\u044f\u0431\u0440\u044c\u0441\u043a\u0430\u044f, \u041e\u043a\u0442\u044f\u0431\u0440\u044c\u0441\u043a\u0430\u044f - \u0428\u0435\u0440\u043a\u0430\u043b\u044b",
+      "osm_timestamp": "2025-02-21T16:02:05Z",
+      "osm_version": "13"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 310065833,
+      "feature_type": "gas_pipeline",
+      "name": "\u041d\u0430\u0434\u044b\u043c \u2014 \u041f\u0443\u043d\u0433\u0430 1",
+      "osm_timestamp": "2025-02-18T11:53:34Z",
+      "osm_version": "9"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 316170571,
+      "feature_type": "power_line",
+      "name": "\u043e\u0442\u043f? \u041e\u043a\u0442\u044f\u0431\u0440\u044c\u0441\u043a\u0430\u044f \u043e\u0442 \u041f\u043e\u0433\u0440\u0435\u0431\u043d\u043e\u0435 - \u0411\u0435\u043b\u043e\u044f\u0440\u0441\u043a\u0430\u044f \u0441 \u043e\u0442\u043f.",
+      "osm_timestamp": "2025-02-05T12:51:08Z",
+      "osm_version": "3"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 370864134,
+      "feature_type": "gas_pipeline",
+      "name": "\u0423\u0440\u0435\u043d\u0433\u043e\u0439 \u2014 \u041f\u0435\u0442\u0440\u043e\u0432\u0441\u043a",
+      "osm_timestamp": "2024-07-30T20:36:59Z",
+      "osm_version": "9"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 371178183,
+      "feature_type": "gas_pipeline",
+      "name": "\u0423\u0440\u0435\u043d\u0433\u043e\u0439 \u2014 \u041d\u043e\u0432\u043e\u043f\u0441\u043a\u043e\u0432",
+      "osm_timestamp": "2025-02-17T19:35:30Z",
+      "osm_version": "9"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 371257856,
+      "feature_type": "gas_pipeline",
+      "name": "\u041d\u0430\u0434\u044b\u043c \u2014 \u041f\u0443\u043d\u0433\u0430 3",
+      "osm_timestamp": "2025-02-17T19:35:30Z",
+      "osm_version": "10"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 371257858,
+      "feature_type": "gas_pipeline",
+      "name": "\u041d\u0430\u0434\u044b\u043c \u2014 \u041f\u0443\u043d\u0433\u0430 4",
+      "osm_timestamp": "2025-02-17T19:35:30Z",
+      "osm_version": "9"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 371292075,
+      "feature_type": "gas_pipeline",
+      "name": "\u041d\u0430\u0434\u044b\u043c \u2014 \u041f\u0443\u043d\u0433\u0430 2",
+      "osm_timestamp": "2025-02-18T11:53:34Z",
+      "osm_version": "9"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 1304647310,
+      "feature_type": "gas_pipeline",
+      "name": "\u041d\u0430\u0434\u044b\u043c \u2014 \u041f\u0443\u043d\u0433\u0430 5",
+      "osm_timestamp": "2025-02-17T19:35:30Z",
+      "osm_version": "2"
+    },
+    {
+      "sample_id": "center_109513__02km",
+      "osm_way_id": 1304720395,
+      "feature_type": "gas_pipeline",
+      "name": "\u041e\u0442\u0432\u043e\u0434 \u043a \u0413\u0420\u0421 \u0428\u0435\u0440\u043a\u0430\u043b\u044b",
+      "osm_timestamp": "2024-07-30T20:36:59Z",
+      "osm_version": "1"
+    },
+    {
+      "sample_id": "center_106863__32km",
+      "osm_way_id": 150583267,
+      "feature_type": "waterway",
+      "name": "\u041b\u0435\u043d\u0430",
+      "osm_timestamp": "2026-05-01T21:13:46Z",
+      "osm_version": "26"
+    },
+    {
+      "sample_id": "center_106863__32km",
+      "osm_way_id": 557131845,
+      "feature_type": "waterway",
+      "name": null,
+      "osm_timestamp": "2018-01-30T21:18:44Z",
+      "osm_version": "1"
+    },
+    {
+      "sample_id": "center_106863__32km",
+      "osm_way_id": 557131846,
+      "feature_type": "waterway",
+      "name": null,
+      "osm_timestamp": "2018-01-30T21:18:44Z",
+      "osm_version": "1"
+    },
+    {
+      "sample_id": "center_106863__32km",
+      "osm_way_id": 557131847,
+      "feature_type": "waterway",
+      "name": null,
+      "osm_timestamp": "2020-05-23T11:34:00Z",
+      "osm_version": "3"
+    },
+    {
+      "sample_id": "center_106863__32km",
+      "osm_way_id": 557261223,
+      "feature_type": "waterway",
+      "name": null,
+      "osm_timestamp": "2020-05-08T19:28:30Z",
+      "osm_version": "2"
+    }
+  ]
+}

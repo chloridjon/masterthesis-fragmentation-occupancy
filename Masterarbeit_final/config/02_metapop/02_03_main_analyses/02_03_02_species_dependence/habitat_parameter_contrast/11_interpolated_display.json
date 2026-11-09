@@ -1,0 +1,11 @@
+{
+  "source_results": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/habitat_parameter_contrast/conditional_256_8_16",
+  "source_arrays": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/habitat_parameter_contrast/conditional_256_8_16/11_habitat_parameter_arrays.npz",
+  "data_directory": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/habitat_parameter_contrast/conditional_256_8_16/interpolated",
+  "method": "Bilinear, linear H and linear log10 parameter; class means anchored at logarithmic class midpoints",
+  "extrapolation": false,
+  "n_display_H": 550,
+  "n_display_parameter": 320,
+  "verification_seed": 2026101501,
+  "preserve_uninterpolated_figures": true
+}
