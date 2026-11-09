@@ -1,0 +1,8 @@
+{
+  "minimum_valid_seeds": 3,
+  "minimum_valid_bootstrap_fraction": 0.95,
+  "interval_policy": "withhold unconverged/undefined pointwise intervals",
+  "replicate_policy": "complete matched seed prefix only",
+  "seed_influence_occupancy_tolerance": 0.05,
+  "authorisation": "overnight preliminary Result B; report due 2026-10-13 08:00 Europe/Berlin"
+}

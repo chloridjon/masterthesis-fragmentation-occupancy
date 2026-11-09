@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "n_snapshots": 88,
+  "identity": {
+    "H_target": true,
+    "grid_sha256": true,
+    "n_clusters": true,
+    "n_random_cumulative": true,
+    "n_directed_cumulative": true
+  },
+  "metrics": {
+    "edge_density_total": {
+      "matches": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    "largest_cluster_fraction_forest": {
+      "matches": true,
+      "max_abs_error": 0.0
+    },
+    "chi": {
+      "matches": true,
+      "max_abs_error": 0.0
+    },
+    "mean_nearest_neighbor_distance": {
+      "matches": true,
+      "max_abs_error": 0.0
+    },
+    "mean_pairwise_distance": {
+      "matches": true,
+      "max_abs_error": 0.0
+    },
+    "complete_mst_d50": {
+      "matches": true,
+      "max_abs_error": 0.0
+    }
+  },
+  "scope": "One original-size only-random trajectory at replicate1; legacy ED converted once by1.99; full 1400-trajectory ensemble not rerun"
+}

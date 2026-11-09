@@ -1,0 +1,52 @@
+{
+  "analysis_plan_section": "1.2.2",
+  "grid_size_cells": 200,
+  "base_seed": 20260924,
+  "n_seed_blocks": 30,
+  "h_targets": [
+    0.99,
+    0.9,
+    0.8,
+    0.7,
+    0.5,
+    0.3,
+    0.1,
+    0.01
+  ],
+  "rho_values": [
+    0.9,
+    0.99,
+    0.999
+  ],
+  "access_reference": {
+    "eta": 1.0,
+    "k": 3,
+    "lambda": 0.5
+  },
+  "generation_boundary": "periodic",
+  "analysis_boundary": "open",
+  "cluster_connectivity": "4",
+  "distance_mode": "voronoi_dt",
+  "voronoi_depth": 1,
+  "metrics": [
+    "edge_density_total",
+    "largest_cluster_fraction_forest",
+    "chi",
+    "mean_nearest_neighbor_distance",
+    "mean_pairwise_distance",
+    "complete_mst_d50"
+  ],
+  "access_source_config": "01_landscape/01_02_preliminary_analyses/01_02_01_access_parameter_selection/03_focal_rho_090_099_0999.json",
+  "access_source_data": "01_landscape/01_02_preliminary_analyses/01_02_01_access_parameter_selection/focal_rho_090_099_0999/landscape_metrics.csv",
+  "bootstrap": {
+    "initial_draws": 500,
+    "batch_draws": 500,
+    "maximum_draws": 6000,
+    "consecutive_stable_batches": 3,
+    "correlation_tolerance": 0.01
+  },
+  "seed_influence_tolerance": 0.1,
+  "redundancy_flag_min_median_abs_spearman": 0.8,
+  "redundancy_flag_min_fraction_strong_h": 0.5,
+  "diagnostic_plot_min_strong_h_levels": 2
+}

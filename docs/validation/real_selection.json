@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "n_catalog_rows": 161440,
+  "n_low_candidates": 59509,
+  "n_high_candidates": 43383,
+  "n_original": 10000,
+  "n_recreated": 10000,
+  "exact_id_order": true,
+  "missing_ids": [],
+  "unexpected_ids": [],
+  "original_ids_sha256": "ca9bbdd901a81153e20bc27941dcec3d29739a4826004f130687ec47b06a0ab4",
+  "recreated_ids_sha256": "ca9bbdd901a81153e20bc27941dcec3d29739a4826004f130687ec47b06a0ab4",
+  "expected_ids_sha256": null,
+  "matches_published_reference": null,
+  "selection_seeds": {
+    "low": 20260833,
+    "high": 20260902
+  },
+  "numpy_version": "2.3.4",
+  "source_sha256": {
+    "candidate_catalog.csv": "baacfbc203c99b6ea6afc823c5a4dcd895700beb52f094616f615d55023c2059",
+    "selected_landscapes.csv": "4418f3be76e57605eac254514cf86ad16714e4169caf74284292dad3a3258c18"
+  },
+  "scope": "Selection from original catalogue; does not rerun source raster aggregation"
+}

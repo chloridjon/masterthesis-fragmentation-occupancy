@@ -1,0 +1,55 @@
+{
+  "focal_positive_rho_values": [
+    0.9,
+    0.99,
+    0.999
+  ],
+  "only_random_is_shared_baseline": true,
+  "n_removals_to_H_0_01": 39600,
+  "first_removal_forced_random": true,
+  "scenarios": [
+    {
+      "id": "only_random",
+      "method": "only_random",
+      "rho": 0.0,
+      "expected_random_removals_at_H_0_01": 39600.0
+    },
+    {
+      "id": "edge_random_rho_900",
+      "method": "edge_random",
+      "rho": 0.9,
+      "expected_random_removals_at_H_0_01": 3960.899999999999
+    },
+    {
+      "id": "edge_random_rho_990",
+      "method": "edge_random",
+      "rho": 0.99,
+      "expected_random_removals_at_H_0_01": 396.99000000000035
+    },
+    {
+      "id": "edge_random_rho_999",
+      "method": "edge_random",
+      "rho": 0.999,
+      "expected_random_removals_at_H_0_01": 40.59900000000003
+    },
+    {
+      "id": "access_weighted_rho_900",
+      "method": "access_weighted",
+      "rho": 0.9,
+      "expected_random_removals_at_H_0_01": 3960.899999999999
+    },
+    {
+      "id": "access_weighted_rho_990",
+      "method": "access_weighted",
+      "rho": 0.99,
+      "expected_random_removals_at_H_0_01": 396.99000000000035
+    },
+    {
+      "id": "access_weighted_rho_999",
+      "method": "access_weighted",
+      "rho": 0.999,
+      "expected_random_removals_at_H_0_01": 40.59900000000003
+    }
+  ],
+  "continuous_gradient_analyses_use_separate_rho_grid": true
+}

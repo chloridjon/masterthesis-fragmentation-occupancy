@@ -1,0 +1,105 @@
+{
+  "analysis_plan_sections": [
+    "2.2.1",
+    "2.2.2",
+    "2.2.3",
+    "2.2.4"
+  ],
+  "landscape_config": "config/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/07_structural_scenario_responses.json",
+  "landscape_data": "data/processed/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/landscape_metrics.csv",
+  "replicates": [
+    1,
+    51,
+    101,
+    151,
+    200
+  ],
+  "h_targets": [
+    0.0,
+    0.025,
+    0.075,
+    0.175,
+    0.325,
+    0.5,
+    0.65,
+    0.825,
+    0.975,
+    1.0
+  ],
+  "area_units": "habitat cell counts; no normalisation",
+  "distance_units": "cell-coordinate distances; no physical calibration",
+  "b": 1.0,
+  "x": 0.5,
+  "initial_occupancy": 1.0,
+  "kernel_epsilon": 0.0,
+  "solver": {
+    "max_iter": 20000,
+    "retry_max_iter": 100000,
+    "tol": 1e-10
+  },
+  "model_formulations": [
+    0.0
+  ],
+  "kernel_tolerance": 0.01,
+  "lower_occupancy_target": 0.99,
+  "boundary_log_relative_tolerance": 1e-05,
+  "upper_capacity_margin": 0.01,
+  "capacity": {
+    "tol": 1e-10,
+    "max_iter": 2000
+  },
+  "pilot_grid": {
+    "n_half_distances": 17,
+    "n_r_values": 25,
+    "floor": 0.05,
+    "ceiling": 0.95,
+    "minimum_valid_seeds": 3,
+    "log10_r_min": -12.0,
+    "log10_r_max": 6.0,
+    "log10_r_step": 0.25,
+    "half_distances": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0,
+      256.0,
+      512.0,
+      1024.0,
+      2048.0,
+      4096.0
+    ]
+  },
+  "final_lhs": {
+    "n_samples": 128,
+    "seed": 2026100502
+  },
+  "seed_influence": {
+    "occupancy_tolerance": 0.05,
+    "maximum_sensitive_fraction": 0.1
+  },
+  "selection": {
+    "lower_half_distance": 1.0,
+    "central_fraction": 0.9,
+    "plateau_tolerance": 0.05,
+    "consecutive_plateau_steps": 2,
+    "margin_log10_r": 0.25
+  },
+  "selection_sensitivity": {
+    "plateau_tolerances": [
+      0.025,
+      0.1
+    ],
+    "margins_log10_r": [
+      0.125,
+      0.5
+    ],
+    "lower_half_distances": [
+      2.0
+    ],
+    "seed_endpoint_tolerance_log10": 0.25
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "authorization": "Author correction 2 November2026: all content stays in5.3; make A/B/C reproducible while considering responses in5.1 and5.2; no D; birds appear mainly in B.",
+  "output": "results/00_thesis_figures/14_response_region_candidate_20261102",
+  "low_mean_occupancy": 0.05,
+  "high_mean_occupancy": 0.95,
+  "low_sensitivity": [
+    0.025,
+    0.05,
+    0.075
+  ],
+  "high_sensitivity": [
+    0.925,
+    0.95,
+    0.975
+  ],
+  "H_range": [
+    0.005,
+    0.925
+  ],
+  "status": "SUPERSEDED by explicit author instruction: use exploratory Mean NN/LCF/chi regions, not Q.",
+  "definition": "Q is the mean across seven scenarios of the normalised area under each scenario's median occupancy curve, using the same H-width integration as5.1. A:Q>=0.95; C:Q<=0.05; B:remaining profiles. No structural correlation or bird-fit score enters the rule.",
+  "limitations": "Thresholds are explicit descriptive conventions, not biological discontinuities. Q measures average response level, not full curve shape; within-region variation, H dependence and scenario contrasts must still be inspected. A can include the lower-right area; no D is created. Bird fits assess model responses and do not identify demographic traits."
+}

@@ -1,0 +1,41 @@
+{
+  "dataset_id": "morante_filho_2021_table1",
+  "schema_version": "1.0.0",
+  "citation": "Morante-Filho, J.C., Benchimol, M. & Faria, D. (2021). Landscape Ecology 36, 105-117.",
+  "doi": "https://doi.org/10.1007/s10980-020-01121-6",
+  "source_url": "https://www.researchgate.net/publication/344284648_Landscape_composition_is_the_strongest_determinant_of_bird_occupancy_patterns_in_tropical_forest_patches",
+  "retrieved_on": "2026-10-13",
+  "data_type": "Rounded published model predictions; not detection histories or raw observations",
+  "source_table": "Main article Table 1",
+  "source_rows": 19,
+  "copyright": "Original article copyright Springer Nature B.V. 2020; no open licence identified",
+  "verification": "Numbers parsed directly from retained author full-text table extraction; Table S2 classifications cross-checked; publisher PDF table not visually verified",
+  "spelling": "Unicode compatibility ligatures normalised; extracted source species spelling otherwise retained. Drimophila squamata joins supplementary Drymophilla squamata explicitly; verify taxonomy before external joins.",
+  "classification_aliases": {
+    "Drimophila squamata": "Drymophilla squamata"
+  },
+  "selection": "All Table 1 rows labelled Forest; Non-forest rows remain in the source table but are excluded from reconstruction.",
+  "selection_qualification": "Table 1 membership is used, rather than a new minimum-AIC filter. For Crypturellus soui, Table S4 lists an understory model at minimum AIC and supported forest-cover models within delta AIC 2.",
+  "files": {
+    "table1_web_extract.txt": "fbde4538a044f376a12a56d9d1ef8c486707a19aa147a867ae98c1b2750d9d1e",
+    "table1.csv": "11c231c4b068514dd6970ac4a0ff818d6c6f26056ff283194ac8fb4ca73c2a4a",
+    "10980_2020_1121_MOESM1_ESM.docx": "1692f7854b43921475bbbe0a75b89b663f61ed6a326fcd310effb23c1b8095a1"
+  },
+  "columns": {
+    "species_id": "Stable table-row identifier; not a taxonomic authority identifier",
+    "table1_row": "1-based source data-row order",
+    "species_as_published": "Name from the retained main-article text extraction",
+    "habitat_specialization": "Source Forest or Non-forest classification",
+    "trophic_guild": "Source main diet category",
+    "published_psi_H020": "Published modelled site occupancy at H=0.20; probability 0-1, two decimal places",
+    "published_psi_H040": "Published modelled site occupancy at H=0.40; probability 0-1, two decimal places",
+    "published_H_psi060_percent": "Published forest-cover threshold for psi=0.60; percentage, one decimal place",
+    "included_in_reconstruction": "True only for the 15 Forest-labelled rows"
+  },
+  "empirical_unit": "Sampled forest site; forest cover within a 600-m-radius buffer",
+  "observed_H_range": [
+    0.0675,
+    0.9818
+  ],
+  "range_source": "Supplement Table S1"
+}

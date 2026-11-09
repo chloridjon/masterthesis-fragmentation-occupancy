@@ -1,0 +1,1087 @@
+{
+  "schema_version": 1,
+  "steps": {
+    "distance": {
+      "description": "distance",
+      "needs": [],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_01_analysis_framework/01_01_03_distance_graph_selection/01_distance_graph_selection.py"
+    },
+    "access": {
+      "description": "access",
+      "needs": [],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_02_preliminary_analyses/01_02_01_access_parameter_selection/02_access_parameter_selection.py"
+    },
+    "table-design": {
+      "description": "table design",
+      "needs": [],
+      "args": [],
+      "action": "table-design"
+    },
+    "table-access-sensitivity": {
+      "description": "table access sensitivity",
+      "needs": [
+        "access"
+      ],
+      "args": [],
+      "action": "table-access-sensitivity"
+    },
+    "redundancy": {
+      "description": "redundancy",
+      "needs": [
+        "distance",
+        "access"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_02_preliminary_analyses/01_02_02_metric_redundancy/03_metric_redundancy.py"
+    },
+    "redundancy-summary": {
+      "description": "redundancy summary",
+      "needs": [
+        "redundancy"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_02_preliminary_analyses/01_02_02_metric_redundancy/04_metric_redundancy_summary.py"
+    },
+    "landscapes": {
+      "description": "landscapes",
+      "needs": [],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/07_structural_scenario_responses.py"
+    },
+    "landscape-summary": {
+      "description": "landscape summary",
+      "needs": [
+        "landscapes"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/07_structural_scenario_summary.py"
+    },
+    "real-catalogue": {
+      "description": "real catalogue",
+      "needs": [],
+      "args": [
+        "--source",
+        "{root}/data/external/JRC_GFC2020_V3_COG.tif",
+        "--gshhg-root",
+        "{root}/data/external/gshhg-shp-2.3.7",
+        "--mode",
+        "macrogrid",
+        "--outdir",
+        "{root}/data/real_landscapes",
+        "--max-centers",
+        "0",
+        "--seed",
+        "20260831",
+        "--selection-seed",
+        "20260833",
+        "--h-max",
+        "0.6",
+        "--samples-per-bin",
+        "100"
+      ],
+      "module": "src.analysis.sample_jrc_gfc2020_landscapes",
+      "action": null,
+      "inputs": [
+        "data/external/JRC_GFC2020_V3_COG.tif",
+        "data/external/gshhg-shp-2.3.7"
+      ]
+    },
+    "real-high-cover": {
+      "description": "real high cover",
+      "needs": [
+        "real-catalogue"
+      ],
+      "args": [
+        "--root",
+        "{root}/data/real_landscapes",
+        "--source",
+        "{root}/data/external/JRC_GFC2020_V3_COG.tif",
+        "--selection-seed",
+        "20260902"
+      ],
+      "module": "src.analysis.extend_jrc_gfc2020_high_h"
+    },
+    "real-selection-audit": {
+      "description": "real selection audit",
+      "needs": [
+        "real-high-cover"
+      ],
+      "args": [],
+      "action": "real-selection-audit"
+    },
+    "real-metrics": {
+      "description": "real metrics",
+      "needs": [
+        "real-selection-audit"
+      ],
+      "args": [
+        "--real-root",
+        "{root}/data/real_landscapes"
+      ],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_03_result_a/01_03_02_real_landscape_coverage/08_recompute_real_metrics.py"
+    },
+    "coverage": {
+      "description": "coverage",
+      "needs": [
+        "real-metrics",
+        "landscape-summary"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_03_result_a/01_03_02_real_landscape_coverage/08_real_landscape_coverage.py"
+    },
+    "parameter-limits": {
+      "description": "parameter limits",
+      "needs": [
+        "landscapes"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_limit_based_species_parameters.py"
+    },
+    "parameter-transitions": {
+      "description": "parameter transitions",
+      "needs": [
+        "parameter-limits"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_transition_species_parameters.py"
+    },
+    "initial-128": {
+      "description": "initial 128",
+      "needs": [
+        "parameter-transitions"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_compute_lhs_occupancy.py"
+    },
+    "initial-128-audit": {
+      "description": "initial 128 audit",
+      "needs": [
+        "initial-128"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_lhs_audit.py"
+    },
+    "initial-128-plausibility": {
+      "description": "initial 128 plausibility",
+      "needs": [
+        "initial-128-audit"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_full_plausibility.py"
+    },
+    "response-domain": {
+      "description": "response domain",
+      "needs": [
+        "initial-128-plausibility"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_lhs_response_domain.py"
+    },
+    "response-domain-review": {
+      "description": "response domain review",
+      "needs": [
+        "response-domain"
+      ],
+      "args": [
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_lhs_response_domain.py"
+    },
+    "boundary-refinement": {
+      "description": "boundary refinement",
+      "needs": [
+        "response-domain-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_response_boundary_refinement.py"
+    },
+    "boundary-audit": {
+      "description": "boundary audit",
+      "needs": [
+        "boundary-refinement"
+      ],
+      "args": [
+        "--stage",
+        "all"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_response_boundary_audit.py"
+    },
+    "boundary-review": {
+      "description": "boundary review",
+      "needs": [
+        "boundary-audit"
+      ],
+      "args": [
+        "--stage",
+        "confirm"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_response_boundary_audit.py"
+    },
+    "sample-256": {
+      "description": "sample 256",
+      "needs": [
+        "boundary-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_confirmed_response_sampling.py"
+    },
+    "sample-256-plot": {
+      "description": "sample 256 plot",
+      "needs": [
+        "sample-256"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_confirmed_response_design_plot.py"
+    },
+    "sample-256-review": {
+      "description": "sample 256 review",
+      "needs": [
+        "sample-256-plot"
+      ],
+      "args": [
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_02_species_parameter_selection/09_confirmed_response_design_plot.py"
+    },
+    "occupancy-first-five": {
+      "description": "occupancy first five",
+      "needs": [
+        "sample-256"
+      ],
+      "args": [
+        "--n-seeds",
+        "5"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_confirmed_domain_compute.py"
+    },
+    "occupancy-five-summary": {
+      "description": "occupancy five summary",
+      "needs": [
+        "occupancy-first-five"
+      ],
+      "args": [
+        "--n-seeds",
+        "5"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_confirmed_domain_summary.py"
+    },
+    "occupancy-five-review": {
+      "description": "occupancy five review",
+      "needs": [
+        "occupancy-five-summary"
+      ],
+      "args": [
+        "--n-seeds",
+        "5",
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_confirmed_domain_summary.py"
+    },
+    "occupancy-bind-producer": {
+      "description": "occupancy bind producer",
+      "needs": [
+        "occupancy-five-review"
+      ],
+      "args": [],
+      "action": "bind-producer"
+    },
+    "occupancy-8-16": {
+      "description": "occupancy 8 16",
+      "needs": [
+        "occupancy-bind-producer"
+      ],
+      "args": [
+        "--stage",
+        "compute"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_unequal_replication.py"
+    },
+    "occupancy-8-16-summary": {
+      "description": "occupancy 8 16 summary",
+      "needs": [
+        "occupancy-8-16"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_unequal_summary.py"
+    },
+    "occupancy-8-16-export": {
+      "description": "occupancy 8 16 export",
+      "needs": [
+        "occupancy-8-16-summary"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_unequal_export.py"
+    },
+    "occupancy-8-16-review": {
+      "description": "occupancy 8 16 review",
+      "needs": [
+        "occupancy-8-16-export"
+      ],
+      "args": [
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_unequal_export.py"
+    },
+    "reference-compute": {
+      "description": "reference compute",
+      "needs": [
+        "occupancy-8-16-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_conditional_reference_update.py"
+    },
+    "reference-summary": {
+      "description": "reference summary",
+      "needs": [
+        "reference-compute"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_01_scenario_occupancy/10_conditional_reference_summary.py"
+    },
+    "reference-review": {
+      "description": "reference review",
+      "needs": [
+        "reference-summary"
+      ],
+      "args": [
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_01_scenario_occupancy/10_conditional_reference_summary.py"
+    },
+    "bird-inputs": {
+      "description": "bird inputs",
+      "needs": [],
+      "args": [],
+      "action": "bird-inputs"
+    },
+    "bird-reconstruction": {
+      "description": "bird reconstruction",
+      "needs": [
+        "bird-inputs"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_reconstruct_bird_curves.py"
+    },
+    "bird-digitisation": {
+      "description": "bird digitisation",
+      "needs": [
+        "bird-reconstruction"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_digitize_bird_figure2.py"
+    },
+    "bird-digitisation-review": {
+      "description": "bird digitisation review",
+      "needs": [
+        "bird-digitisation"
+      ],
+      "args": [
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_digitize_bird_figure2.py"
+    },
+    "bird-fit-initial": {
+      "description": "bird fit initial",
+      "needs": [
+        "initial-128-audit",
+        "bird-digitisation-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_bird_parameter_surfaces.py"
+    },
+    "bird-fit-initial-review": {
+      "description": "bird fit initial review",
+      "needs": [
+        "bird-fit-initial"
+      ],
+      "args": [
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_bird_parameter_surfaces.py"
+    },
+    "bird-fit-conditional": {
+      "description": "bird fit conditional",
+      "needs": [
+        "occupancy-five-review",
+        "bird-fit-initial-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_conditional_bird_update.py"
+    },
+    "bird-fit-conditional-review": {
+      "description": "bird fit conditional review",
+      "needs": [
+        "bird-fit-conditional"
+      ],
+      "args": [
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_conditional_bird_update.py"
+    },
+    "bird-fit-final": {
+      "description": "bird fit final",
+      "needs": [
+        "bird-fit-conditional-review",
+        "occupancy-8-16-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_unequal_bird_update.py"
+    },
+    "bird-fit-final-review": {
+      "description": "bird fit final review",
+      "needs": [
+        "bird-fit-final"
+      ],
+      "args": [
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_unequal_bird_update.py"
+    },
+    "bird-band-source-review": {
+      "description": "bird band source review",
+      "needs": [
+        "bird-digitisation"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/04_bird_band_source_review.py"
+    },
+    "bird-groups": {
+      "description": "bird groups",
+      "needs": [
+        "bird-reconstruction"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/05_bird_response_groups.py"
+    },
+    "bird-example-surfaces": {
+      "description": "bird example surfaces",
+      "needs": [
+        "bird-fit-final-review",
+        "bird-band-source-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/04_selected_bird_sum_surfaces.py"
+    },
+    "integrated-contrasts": {
+      "description": "integrated contrasts",
+      "needs": [
+        "occupancy-8-16-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_integrated_occupancy_contrast.py"
+    },
+    "fixed-H-surfaces": {
+      "description": "fixed H surfaces",
+      "needs": [
+        "occupancy-8-16-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_fixed_H_parameter_surfaces.py"
+    },
+    "H-parameter-contrasts": {
+      "description": "H parameter contrasts",
+      "needs": [
+        "occupancy-8-16-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_habitat_parameter_contrast.py"
+    },
+    "H-parameter-interpolation": {
+      "description": "H parameter interpolation",
+      "needs": [
+        "H-parameter-contrasts"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_habitat_parameter_interpolated.py"
+    },
+    "H-difference": {
+      "description": "H difference",
+      "needs": [
+        "occupancy-8-16-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/05_occupancy_H_difference.py"
+    },
+    "parameter-correlations-prepare": {
+      "description": "parameter correlations prepare",
+      "needs": [
+        "occupancy-8-16-review"
+      ],
+      "args": [
+        "--stage",
+        "prepare"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_spearman_parameter_associations.py"
+    },
+    "parameter-correlations-bootstrap": {
+      "description": "parameter correlations bootstrap",
+      "needs": [
+        "parameter-correlations-prepare"
+      ],
+      "args": [
+        "--stage",
+        "bootstrap"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_spearman_parameter_associations.py"
+    },
+    "parameter-correlations-export": {
+      "description": "parameter correlations export",
+      "needs": [
+        "parameter-correlations-bootstrap"
+      ],
+      "args": [
+        "--stage",
+        "export"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_spearman_parameter_associations.py"
+    },
+    "parameter-correlations-review": {
+      "description": "parameter correlations review",
+      "needs": [
+        "parameter-correlations-export"
+      ],
+      "args": [
+        "--stage",
+        "confirm"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_02_species_dependence/11_spearman_parameter_associations.py"
+    },
+    "metric-associations-prepare": {
+      "description": "metric associations prepare",
+      "needs": [
+        "bird-fit-final-review"
+      ],
+      "args": [
+        "--stage",
+        "prepare"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_03_metric_associations/12_result_d_metric_associations.py"
+    },
+    "metric-associations-bootstrap": {
+      "description": "metric associations bootstrap",
+      "needs": [
+        "metric-associations-prepare"
+      ],
+      "args": [
+        "--stage",
+        "bootstrap"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_03_metric_associations/12_result_d_metric_associations.py"
+    },
+    "metric-associations-export": {
+      "description": "metric associations export",
+      "needs": [
+        "metric-associations-bootstrap"
+      ],
+      "args": [
+        "--stage",
+        "export"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_03_metric_associations/12_result_d_metric_associations.py"
+    },
+    "metric-associations-review": {
+      "description": "metric associations review",
+      "needs": [
+        "metric-associations-export"
+      ],
+      "args": [
+        "--stage",
+        "confirm"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_03_metric_associations/12_result_d_metric_associations.py"
+    },
+    "rank-sensitivity": {
+      "description": "rank sensitivity",
+      "needs": [
+        "metric-associations-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_03_main_analyses/02_03_03_metric_associations/12_rank_sensitivity.py"
+    },
+    "regions-initial": {
+      "description": "regions initial",
+      "needs": [
+        "metric-associations-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/13_metric_regions.py"
+    },
+    "regions-boundary-base": {
+      "description": "regions boundary base",
+      "needs": [
+        "regions-initial"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/14_region_proposal_20261104.py"
+    },
+    "regions-boundary": {
+      "description": "regions boundary",
+      "needs": [
+        "regions-boundary-base"
+      ],
+      "args": [
+        "--focused-d"
+      ],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/14_region_proposal_20261104.py"
+    },
+    "regions-final": {
+      "description": "regions final",
+      "needs": [
+        "regions-boundary"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/15_regions_ABCD_20261104.py"
+    },
+    "regions-review": {
+      "description": "regions review",
+      "needs": [
+        "regions-final"
+      ],
+      "args": [
+        "--reviewed"
+      ],
+      "action": "regions-review",
+      "requires_review": true
+    },
+    "regional-display": {
+      "description": "regional display",
+      "needs": [
+        "regions-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/17_thematic_association_draft_20261104.py"
+    },
+    "response-range-sensitivity": {
+      "description": "response range sensitivity",
+      "needs": [
+        "metric-associations-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/16_low_cover_metric_maps_20261104.py"
+    },
+    "self-pilot": {
+      "description": "self pilot",
+      "needs": [
+        "sample-256"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_pilot.py"
+    },
+    "self-recovery": {
+      "description": "self recovery",
+      "needs": [
+        "self-pilot"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_recovery.py"
+    },
+    "self-pilot-audit": {
+      "description": "self pilot audit",
+      "needs": [
+        "self-recovery"
+      ],
+      "args": [
+        "--stage",
+        "audit"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_review.py"
+    },
+    "self-pilot-export": {
+      "description": "self pilot export",
+      "needs": [
+        "self-pilot-audit"
+      ],
+      "args": [
+        "--stage",
+        "export"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_review.py"
+    },
+    "self-pilot-report": {
+      "description": "self pilot report",
+      "needs": [
+        "self-pilot-export"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_closeout.py"
+    },
+    "self-pilot-review": {
+      "description": "self pilot review",
+      "needs": [
+        "self-pilot-report"
+      ],
+      "args": [
+        "--reviewed"
+      ],
+      "action": "self-pilot-review",
+      "requires_review": true
+    },
+    "self-extension": {
+      "description": "self extension",
+      "needs": [
+        "self-pilot-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_extension.py"
+    },
+    "self-validation": {
+      "description": "self validation",
+      "needs": [
+        "self-extension"
+      ],
+      "args": [
+        "--stage",
+        "validation"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_extension_review.py"
+    },
+    "self-diagnostics": {
+      "description": "self diagnostics",
+      "needs": [
+        "self-validation"
+      ],
+      "args": [
+        "--full-audit"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_extension_diagnostics.py"
+    },
+    "self-export": {
+      "description": "self export",
+      "needs": [
+        "self-diagnostics"
+      ],
+      "args": [
+        "--stage",
+        "export"
+      ],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_extension_review.py"
+    },
+    "self-review": {
+      "description": "self review",
+      "needs": [
+        "self-export"
+      ],
+      "args": [
+        "--confirm-visual-review"
+      ],
+      "requires_review": true,
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_extension_closeout.py"
+    },
+    "self-response-domain": {
+      "description": "self response domain",
+      "needs": [
+        "self-review"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_04_robustness/13_self_colonization_response_domain.py"
+    },
+    "hybrid-schematic": {
+      "description": "hybrid schematic",
+      "needs": [],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/21_voronoi_hybrid_schematic.py"
+    },
+    "forest-examples": {
+      "description": "forest examples",
+      "needs": [],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_01_analysis_framework/01_01_01_deforestation_landscape_examples.py"
+    },
+    "forest-edge-examples": {
+      "description": "forest edge examples",
+      "needs": [],
+      "args": [
+        "--config",
+        "{root}/Masterarbeit_final/config/01_landscape/01_01_analysis_framework/01_01_01_landscape_examples/edge_access_landscapes_rho099_h030.json"
+      ],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_01_analysis_framework/01_01_01_deforestation_landscape_examples.py"
+    },
+    "voronoi-example": {
+      "description": "voronoi example",
+      "needs": [],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_01_analysis_framework/01_01_02_voronoi_regions_illustration.py"
+    },
+    "mst-example": {
+      "description": "mst example",
+      "needs": [],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_01_analysis_framework/01_01_02_voronoi_mst_illustration.py"
+    },
+    "model-schematics": {
+      "description": "model schematics",
+      "needs": [],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/02_metapop/02_01_model_framework/02_01_conceptual_figures.py"
+    },
+    "method-figures": {
+      "description": "method figures",
+      "needs": [
+        "distance",
+        "access",
+        "redundancy-summary",
+        "real-metrics",
+        "parameter-transitions",
+        "prepare-map"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
+    },
+    "method-center-comparison": {
+      "description": "method center comparison",
+      "needs": [
+        "distance"
+      ],
+      "args": [
+        "--figure",
+        "center-comparison"
+      ],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
+    },
+    "method-access-shares": {
+      "description": "method access shares",
+      "needs": [
+        "access"
+      ],
+      "args": [
+        "--figure",
+        "access-shares"
+      ],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
+    },
+    "method-aggregation": {
+      "description": "method aggregation",
+      "needs": [],
+      "args": [
+        "--figure",
+        "majority-aggregation"
+      ],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
+    },
+    "method-redundancy-style": {
+      "description": "method redundancy style",
+      "needs": [
+        "redundancy-summary"
+      ],
+      "args": [
+        "--figure",
+        "redundancy-main"
+      ],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/03_method_decision_figures.py"
+    },
+    "prepare-map": {
+      "description": "prepare map",
+      "needs": [
+        "real-metrics"
+      ],
+      "args": [],
+      "action": "prepare-map"
+    },
+    "method-redundancy": {
+      "description": "method redundancy",
+      "needs": [
+        "redundancy-summary"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/06_supervisor_revision_figures.py"
+    },
+    "nn-examples": {
+      "description": "nn examples",
+      "needs": [
+        "landscapes"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/07_low_h_nn_zoom_examples.py"
+    },
+    "nn-distributions": {
+      "description": "nn distributions",
+      "needs": [
+        "landscapes"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/08_nn_multiseed_distribution.py"
+    },
+    "cluster-sizes": {
+      "description": "cluster sizes",
+      "needs": [
+        "landscapes"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/10_chi_cluster_size_diagnostic.py"
+    },
+    "patch-geometry": {
+      "description": "patch geometry",
+      "needs": [
+        "landscapes"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/12_interpatch_geometry_diagnostic.py"
+    },
+    "nn-areas": {
+      "description": "nn areas",
+      "needs": [
+        "nn-distributions"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/09_nn_scenario_area_contrast.py"
+    },
+    "real-examples": {
+      "description": "real examples",
+      "needs": [
+        "real-high-cover"
+      ],
+      "args": [],
+      "action": "real-examples"
+    },
+    "figure-provenance": {
+      "description": "figure provenance",
+      "needs": [
+        "landscape-summary",
+        "coverage",
+        "access"
+      ],
+      "args": [],
+      "action": "figure-provenance"
+    },
+    "chapter2-figures": {
+      "description": "chapter2 figures",
+      "needs": [
+        "forest-examples",
+        "forest-edge-examples",
+        "voronoi-example",
+        "mst-example",
+        "model-schematics"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/22_chapter2_author_revision_20261107.py"
+    },
+    "chapter3-figures": {
+      "description": "chapter3 figures",
+      "needs": [
+        "method-figures",
+        "method-center-comparison",
+        "method-aggregation",
+        "method-access-shares",
+        "method-redundancy-style",
+        "hybrid-schematic",
+        "sample-256-plot"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/23_chapter3_cluster_illustrations_20261107.py"
+    },
+    "chapter4-figures": {
+      "description": "chapter4 figures",
+      "needs": [
+        "figure-provenance",
+        "real-examples",
+        "nn-examples",
+        "nn-areas",
+        "cluster-sizes",
+        "patch-geometry"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/24_chapter4_figure_revision_20261107.py"
+    },
+    "reference-display": {
+      "description": "reference display",
+      "needs": [
+        "reference-review",
+        "integrated-contrasts",
+        "H-difference",
+        "self-landscape-example"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/18_occupancy_revision_20261104.py"
+    },
+    "occupancy-panels": {
+      "description": "occupancy panels",
+      "needs": [
+        "reference-review",
+        "integrated-contrasts",
+        "H-difference"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/10_chapter5_review_panels.py"
+    },
+    "self-landscape-example": {
+      "description": "self landscape example",
+      "needs": [
+        "occupancy-8-16-review",
+        "self-response-domain"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/11_occupancy_self_colonisation_example.py"
+    },
+    "chapter5-layout": {
+      "description": "chapter5 layout",
+      "needs": [
+        "regional-display",
+        "bird-example-surfaces",
+        "self-landscape-example",
+        "H-parameter-interpolation"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/20_chapter5_author_revision_20261105.py"
+    },
+    "chapter5-annotations": {
+      "description": "chapter5 annotations",
+      "needs": [
+        "chapter5-layout"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/21_chapter5_annotation_labels_20261107.py"
+    },
+    "chapter5-figures": {
+      "description": "chapter5 figures",
+      "needs": [
+        "reference-display",
+        "occupancy-panels",
+        "chapter5-annotations",
+        "bird-groups",
+        "fixed-H-surfaces",
+        "method-figures",
+        "method-access-shares"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/25_chapter5_labels_20261107.py"
+    },
+    "final-method-labels": {
+      "description": "final method labels",
+      "needs": [
+        "chapter3-figures",
+        "chapter5-figures"
+      ],
+      "args": [],
+      "script": "Masterarbeit_final/code/analyses/00_thesis_figures/26_final_textcheck_20261107.py"
+    },
+    "complete-thesis": {
+      "description": "complete thesis",
+      "needs": [
+        "final-method-labels",
+        "chapter2-figures",
+        "chapter4-figures",
+        "table-design",
+        "table-access-sensitivity",
+        "parameter-correlations-review",
+        "self-response-domain",
+        "response-range-sensitivity"
+      ],
+      "args": [],
+      "action": "verify-thesis"
+    }
+  }
+}

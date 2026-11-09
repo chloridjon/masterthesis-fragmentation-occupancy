@@ -1,0 +1,20 @@
+{
+  "lhs_configuration": "config/02_metapop/02_03_main_analyses/02_03_02_species_dependence/lhs_20_seeds/11_lhs_occupancy.json",
+  "lhs_summary": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/lhs_20_seeds/tables/11_lhs_response_summaries.csv",
+  "lhs_audit": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/lhs_20_seeds/logs/11_independent_audit.json",
+  "lhs_plausibility": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/lhs_20_seeds/logs/11_full_plausibility.json",
+  "lhs_data": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/lhs_20_seeds",
+  "parameter_decision": "results/02_metapop/02_02_species_parameter_selection/transition_focused/logs/09_main_parameter_decision.json",
+  "data_directory": "data/processed/02_metapop/02_02_species_parameter_selection/lhs_128_response_domain",
+  "results_directory": "results/02_metapop/02_02_species_parameter_selection/lhs_128_response_domain",
+  "minimum_valid_seeds": 3,
+  "landscape_quantiles": [0.05, 0.95],
+  "saturation_threshold": 0.05,
+  "sensitivity_thresholds": [0.01, 0.05, 0.10],
+  "rule": "L=min across eligible scenario-H cells of landscape q05; U=max of landscape q95. Retain L<0.95 and U>0.05. Near-one if L>=0.95; near-zero if U<=0.05.",
+  "H_domain": "All stored eligible model H levels, not the restricted empirical bird domain",
+  "boundary_method": "Partial-order bounds from occupancy increasing with half-distance and decreasing with r; no smooth surface interpolation",
+  "grid_shape": [240, 220],
+  "plot_support": "Mask outside convex hull of the 128 profiles; within-hull unresolved regions are hatched",
+  "scope": "Candidate-domain assessment only. No domain adoption, new LHS points or new model computations authorised by this job."
+}

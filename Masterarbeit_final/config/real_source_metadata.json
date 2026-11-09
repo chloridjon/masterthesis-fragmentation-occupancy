@@ -1,0 +1,54 @@
+{
+  "block_shapes": [
+    [
+      1024,
+      1024
+    ]
+  ],
+  "bounds": [
+    -180.0,
+    -60.0,
+    180.0,
+    80.0
+  ],
+  "compression": "Compression.deflate",
+  "count": 1,
+  "crs": "EPSG:4326",
+  "driver": "GTiff",
+  "dtypes": [
+    "uint8"
+  ],
+  "mask_flags": [
+    [
+      "all_valid"
+    ]
+  ],
+  "nodata": null,
+  "overviews": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2047,
+    4095,
+    8182
+  ],
+  "path": "data/external\\JRC_GFC2020_V3_COG.tif",
+  "resolution": [
+    8.333333333333333e-05,
+    8.333333333333333e-05
+  ],
+  "shape": [
+    1680000,
+    4320000
+  ],
+  "tags": {
+    "AREA_OR_POINT": "Area"
+  }
+}

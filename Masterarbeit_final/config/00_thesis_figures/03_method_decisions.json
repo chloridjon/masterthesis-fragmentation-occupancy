@@ -1,0 +1,30 @@
+{
+  "access_results": "01_landscape/01_02_preliminary_analyses/01_02_01_access_parameter_selection/focal_rho_090_099_0999",
+  "redundancy_results": "01_landscape/01_02_preliminary_analyses/01_02_02_metric_redundancy/n30",
+  "real_metrics": "data/processed/01_landscape/01_03_result_a/01_03_02_real_landscape_coverage/08_real_landscape_metrics.csv",
+  "viewer_metadata": "data/real_landscape_viewer/metrics/real_landscape_metrics.csv",
+  "species_results": "02_metapop/02_02_species_parameter_selection/transition_focused",
+  "example_target_H": 0.5,
+  "example_selection": "For each extent, minimise absolute distance to H=0.5; break ties by candidate_id. Examples illustrate the raster representation, not typical landscape structure.",
+  "example_ids": [],
+  "world_geometry": "data/processed/00_thesis_figures/03_method_decisions/world_land.geojson",
+  "figure_directory": "results/00_thesis_figures/03_method_decisions/figures",
+  "review_pdf": "results/00_thesis_figures/03_method_decisions/chapter_03_figure_review.pdf",
+  "access_individual_effects": {
+    "rho": 0.99,
+    "H": 0.3,
+    "reference": {
+      "eta": 1,
+      "k": 3,
+      "lambda": 0.5
+    },
+    "grid_cell_count": 40000,
+    "source_definition": "Legacy unlike-adjacency fraction E/(2*200*199); medians have half-integer edge counts under denominator 79600, not 40000. Current producer now uses E/40000; frozen table hash prevents double conversion.",
+    "tables": {
+      "results/01_landscape/01_02_preliminary_analyses/01_02_01_access_parameter_selection/focal_rho_090_099_0999/tables/02_metric_summary.csv": {
+        "sha256": "7a02c9b36040ca96c2227b31ffd5f5af3aed3dc1416f1079d4975a3f405ad758",
+        "edge_density_source_denominator": 79600
+      }
+    }
+  }
+}

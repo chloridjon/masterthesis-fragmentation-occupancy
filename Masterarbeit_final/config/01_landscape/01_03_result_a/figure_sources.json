@@ -1,0 +1,30 @@
+{
+  "grid_shape": [
+    200,
+    200
+  ],
+  "analysis_boundary": "open",
+  "grid_cell_count": 40000,
+  "edge_density_target_definition": "unlike orthogonal cell adjacencies divided by raster-cell count",
+  "source_definition": "legacy unlike-adjacency fraction: boundary edges / (2 * 200 * 199)",
+  "conversion_factor": 1.99,
+  "scope": "exact unit conversion for figures only; stored source tables remain unchanged; coverage fractions are invariant",
+  "tables": {
+    "results/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/tables/07_response_by_scenario_h.csv": {
+      "sha256": "2691c2fb5745767d147a092162b8b68d92c8ab219c2446310211754a8677da92",
+      "edge_density_source_denominator": 79600
+    },
+    "data/processed/01_landscape/01_03_result_a/01_03_02_real_landscape_coverage/08_real_landscape_metrics.csv": {
+      "sha256": "6c40d47fa656a2d4a3525339188994de8da69573033dbc10ec298ed302b5081a",
+      "edge_density_source_denominator": 79600
+    },
+    "results/01_landscape/01_03_result_a/01_03_02_real_landscape_coverage/tables/08_real_bin_distributions.csv": {
+      "sha256": "0d9e2c1fae9812b7c2d4c7f86a2aedd2ed4124c6e92d89b3edf13b8ded984913",
+      "edge_density_source_denominator": 79600
+    },
+    "results/01_landscape/01_03_result_a/01_03_02_real_landscape_coverage/tables/08_simulation_bin_intervals.csv": {
+      "sha256": "3827e69e2dde14c1eb36025045172b7df67b67996d91cc2b90604118539e4c77",
+      "edge_density_source_denominator": 79600
+    }
+  }
+}

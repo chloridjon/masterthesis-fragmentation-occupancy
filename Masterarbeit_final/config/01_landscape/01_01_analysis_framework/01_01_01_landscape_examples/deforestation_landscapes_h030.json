@@ -1,0 +1,14 @@
+{
+  "habitat_proportion": 0.3,
+  "replicate": 1,
+  "source_config": "config/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/07_structural_scenario_responses.json",
+  "source_trajectories": "data/processed/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/trajectories",
+  "scenario_ids": [
+    "only_random_rho0",
+    "edge_random_rho09",
+    "edge_random_rho099",
+    "edge_random_rho0999"
+  ],
+  "selection_rule": "Use the first matched seed block, fixed before viewing landscapes; no selection by landscape metrics.",
+  "output_stem": "deforestation_landscapes_h030"
+}

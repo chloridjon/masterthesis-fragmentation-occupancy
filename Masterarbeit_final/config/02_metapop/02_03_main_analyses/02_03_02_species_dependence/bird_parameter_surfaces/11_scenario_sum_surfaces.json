@@ -1,0 +1,12 @@
+{
+  "base_configuration": "config/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces/11_bird_parameter_surfaces.json",
+  "source_audit": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces/logs/11_bird_parameter_surfaces_audit.json",
+  "source_data": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces",
+  "data_directory": "data/processed/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces/scenario_sum",
+  "results_directory": "results/02_metapop/02_03_main_analyses/02_03_02_species_dependence/bird_parameter_surfaces/scenario_sum",
+  "aggregation": "Literal sum of all seven scenario-specific whole-curve RMSEs at each fixed parameter profile; each scenario has equal weight",
+  "colour_range": [0, 7],
+  "missingness": "Require all seven scores; outside-hull missingness stays missing, never a zero sum",
+  "mean_equivalence": "Sum divided by seven is the mean scenario RMSE and has identical ordering and parameter-region shapes",
+  "scope": "Additive exploratory comparison; previously checked minimum-scenario figures remain unchanged"
+}

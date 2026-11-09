@@ -1,0 +1,9 @@
+{
+  "habitat_proportion": 0.3,
+  "replicate": 1,
+  "source_config": "config/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/07_structural_scenario_responses.json",
+  "source_trajectories": "data/processed/01_landscape/01_03_result_a/01_03_01_structural_scenario_responses/trajectories",
+  "scenario_ids": ["edge_random_rho099", "access_weighted_rho099"],
+  "selection_rule": "Use the same first matched Result A seed block as the four-panel landscape illustration; no selection by landscape metrics.",
+  "output_stem": "edge_access_landscapes_rho099_h030"
+}

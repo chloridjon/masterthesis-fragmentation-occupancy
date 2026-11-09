@@ -1,0 +1,3 @@
+id,number,step,method
+tab:main-simulation-groups,3.1,table-design,Expected counts computed from the three final configurations; exclusions remain distinct
+tab:app-access-eta-direction,A.1,table-access-sensitivity,"Pair eta1 and eta2 setting medians at fixed k3 and lambda0.5, requiring at least8 valid runs for both settings"
